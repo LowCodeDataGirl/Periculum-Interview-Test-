@@ -1,0 +1,73 @@
+{
+    "customerName": "ARBITRARY NAME",
+    "accountNumber": "3189014610",
+    "openingBalance": 3.0,
+    "closingBalance": 12.0,
+    "totalDebit": 772075.0,
+    "totalCredit": 0,
+    "transactions": [
+        {
+            "transactionDate": "2017-04-03T00:00:00",
+            "narration": "Atm Withdrawal @10571001-Zib Ogudu Branch       U",
+            "amount": 20000.0,
+            "balance": 3.0,
+            "type": "debit"
+        },
+        {
+            "transactionDate": "2017-04-03T00:00:00",
+            "narration": "Atm Withdrawal @10571003-Ogudu Branch Atm3      U",
+            "amount": 20000.0,
+            "balance": 3.0,
+            "type": "debit"
+        },
+        {
+            "transactionDate": "2017-04-04T00:00:00",
+            "narration": "Cob Transfer To Okanlawan  **6996 Cement Fbn",
+            "amount": 400000.0,
+            "balance": 4.0,
+            "type": "debit"
+        },
+        {
+            "transactionDate": "2017-04-04T00:00:00",
+            "narration": "Cob Transfer To Okanlawan  **6996 Cement Fbn",
+            "amount": 5.0,
+            "balance": 4.0,
+            "type": "debit"
+        },
+        {
+            "transactionDate": "2017-04-05T00:00:00",
+            "narration": "Atm Withdrawal @10331178-1033117804734 Shoprite I",
+            "amount": 10000.0,
+            "balance": 5.0,
+            "type": "debit"
+        },
+        {
+            "transactionDate": "2017-04-05T00:00:00",
+            "narration": "Atm Withdrawal @10331178-1033117804734 Shoprite I",
+            "amount": 65.0,
+            "balance": 5.0,
+            "type": "debit"
+        },
+        {
+            "transactionDate": "2017-04-05T00:00:00",
+            "narration": "Cob Transfer To Omoregie J **2114 From Frank Abn",
+            "amount": 7000.0,
+            "balance": 5.0,
+            "type": "debit"
+        },
+        {
+            "transactionDate": "2017-04-05T00:00:00",
+            "narration": "Cob Transfer To Omoregie J **2114 From Frank Abn",
+            "amount": 5.0,
+            "balance": 10.0,
+            "type": "debit"
+        },
+        {
+            "transactionDate": "2017-04-12T00:00:00",
+            "narration": "Transfer From Passmark Comms Ltd",
+            "amount": 315000.0,
+            "balance": 12.0,
+            "type": "debit"
+        }
+    ]
+}
