@@ -1,48 +1,85 @@
 
-# Periculum Interview Test Solution
+#  Bank Statement Parser
 
-This repository contains my solution to the Periculum interview test. The objective of the test is to parse individual transactions from a JSON file extracted from a PDF bank statement. The goal is to extract relevant information such as transaction date, description, amount, type (credit or debit), and balance for each transaction, and organize them into a dictionary structure that matches the provided expected output format.
+This Python program parses bank transactions from a given JSON file and extracts specific transaction data. It also pulls additional meaningful information from the bank statement sample provided.
 
-## Understanding the Test Questions
+## Getting Started
+In order to run the solution, follow the instructions below:
 
-To start, I carefully reviewed the provided test questions and files. The `bank_statement_sample.json` file contains the extracted transactions from a PDF bank statement. The `variables.py` file provides two classes: `StatementInfo` and `Transaction`, which define the variables relevant to the statement records. The `expected_output.json` file outlines the expected format for the solution output.
+### Prerequisites
 
-## Project Structure
+- Python (3.6 or higher)
+- JSON module (built-in with python)
+- Datetime module (built-in with python)
+- re module (built-in with python)
+- os module (built-in with python)
+
+## Problem
+The aim of this project is to parse individual transactions from a bank statement JSON file. For each transaction, the following elements need to be extracted:
+
+- Transaction date
+- Transaction description
+- Amount
+- Type (credit or debit)
+- Balance
+
+The extracted data should be organized into a dictionary corresponding to the transaction. Additional information, including the customer name and account number, are also extracted.
+
+
+ 
+## Directory Structure
 
 To structure my solution, I organized the project directory as follows:
 
+```- root
+  ├── extract.py
+  ├── run.py
+  ├── output
+  │   └── output.json
+  └── src
+      ├── bank_statement_sample.json
+      ├── variables.py
+      └── expected_output.json
 ```
-- extract.py
-- run.py
-- output/
-- src/
-  - bank_statement_sample.json
-  - variables.py
-  - expected_output.json
-```
 
-- `extract.py`: This script contains the functions for extracting the transactions and loading all records into a nested dictionary object, which can then be dumped into a JSON file.
-- `run.py`: This script implements the solution to generate the required output by utilizing the functions defined in `extract.py`.
-- `output/`: This folder is used to store the output JSON file.
-- `src/`: This folder contains the provided files for the test.
-  - `bank_statement_sample.json`: This file contains the JSON data extracted from a PDF bank statement.
-  - `variables.py`: This file defines the `StatementInfo` and `Transaction` classes with relevant variables for the statement records.
-- `expected_output.json`: This file specifies the expected format for the output JSON.
 
-## Solution Approach
 
-Based on the test questions and provided files, I proceeded with the following approach:
+## File Descriptions
 
-1. I created the `load_data` function in `extract.py` to read the content of the JSON file and return it as a string.
-2. I implemented the `extract_account_info` function to extract relevant account information, such as account name, account number, currency, and period, from the content of the JSON file using regular expressions.
-3. I used the `datetime.strptime` method to convert the period start and end dates from the extracted information to datetime objects in the format `YYYY-MM-DDTHH:MM:SS`.
-4. With the extracted account information, I instantiated the `StatementInfo` class with the relevant variables and created an instance called `statement_info`.
-5. Next, I implemented the `extract_transactions` function to extract individual transactions from the content of the JSON file using regular expressions.
-6. I looped over the extracted transactions and processed each transaction individually.
-7. Inside the loop, I parsed the transaction date, description, value date, debit, credit, and balance using regular expressions.
-8. I used `datetime.strptime` to convert the transaction date and value date strings to datetime objects in the format `YYYY-MM-DDTHH:MM:SS`.
-9. I removed commas from the debit, credit, and balance amounts and converted them to float values.
-10. For each transaction, I instantiated the `Transaction` class and assigned the extracted values to the relevant variables.
-11. Finally, I added the instantiated `Transaction` object to the list of transactions in the `StatementInfo` instance.
-12. In the `main` function, I utilized the above-defined functions to load the JSON data, extract the account information, extract the transactions, and create the final `StatementInfo` object.
-13. I converted the `StatementInfo` instance to a dictionary using the `to_dict()` method, and then
+- **extract.py:** The main script that contains the functions for extracting the transactions and loading all records into a nested dict object, which can then be dumped into a JSON file.
+
+- **run.py:** Implements the solution to generate the required output.
+- **output/:** Folder to dump the output JSON file. This is created if it does not exist.
+- **src/:** The source folder containing the JSON files provided for this test.
+
+  - **bank_statement_sample.json:** This is the JSON file containing extracted transactions from a PDF bank statement.
+
+  - **variables.py:** Contains two classes with variables relevant to the statement records. StatementInfo class pertains to general information about the statement, while the Transaction class pertains to information about each transaction in the statement.
+
+  - **expected_output.json:** Demonstrates the expected format for the output of your solution.
+ 
+ 
+
+
+
+## Functionality
+The main functionality of this project is to parse bank statement data from a JSON file and extract detailed information about the transactions and other details present in the statement. The data is formatted into a structure as required by the problem statement and then saved to an output JSON file.
+
+The program does the following:
+
+- Parses the provided JSON bank statement.
+- Extracts each transaction's details and stores them in the Transaction class.
+- Extracts general statement information such as customer name, account number, etc., and stores them in the StatementInfo class.
+- Writes this information in a very specific format into an output JSON file.
+- The transaction date for each transaction is converted to a datetime object in the format YYYY-MM-DDTHH:MM:SS (e.g., 2022-08-27T00:00:00). The transactions, along with other information, are stored in a nested dict object and dumped into a JSON file.
+
+The output JSON is stored in the output folder. Please make sure to study the variables.py file carefully to understand the variables used in the classes.
+
+To run the program, execute run.py. This will generate the required output and dump it into the output JSON file.
+
+**Thank you for reading through this README**
+
+ **頑張って (Ganbatte)**
+
+
+
