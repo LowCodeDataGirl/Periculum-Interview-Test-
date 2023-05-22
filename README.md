@@ -77,6 +77,15 @@ The output JSON is stored in the output folder. Please make sure to study the va
 
 To run the program, execute run.py. This will generate the required output and dump it into the output JSON file.
 
+## Issue
+
+The current implementation of the run.py script takes a hardcoded string as the bank statement content, which is then passed to the extract_bank_statement function. This approach is not flexible or scalable, as it doesn't allow processing data from different JSON files.
+
+## Expected Behavior
+The script should be able to load bank statement content from a JSON file dynamically.
+
+
+
 **Thank you for reading through this README**
 
  **頑張って (Ganbatte)**
