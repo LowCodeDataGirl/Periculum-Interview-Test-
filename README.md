@@ -79,10 +79,14 @@ To run the program, execute run.py. This will generate the required output and d
 
 ## Issue
 
-The current implementation of the run.py script takes a hardcoded string as the bank statement content, which is then passed to the extract_bank_statement function. This approach is not flexible or scalable, as it doesn't allow processing data from different JSON files.
+- The current implementation of the run.py script takes a hardcoded string as the bank statement content, which is then passed to the extract_bank_statement function. This approach is not flexible or scalable, as it doesn't allow processing data from different JSON files.
+
+- The provided code solves the problem of extracting information from a bank statement, but it does so without utilizing the provided StatementInfo and Transaction classes. Instead, it relies on dictionaries to store the extracted information. This implementation approach is suboptimal and can be improved by utilizing the provided classes appropriately.
 
 ## Expected Behavior
-The script should be able to load bank statement content from a JSON file dynamically.
+- The script should be able to load bank statement content from a JSON file dynamically.
+- Initialize the StatementInfo class and populate its variables with the extracted general information from the bank statement.
+- Initialize the Transaction class for each transaction in the bank statement and populate its variables with the relevant transaction details.
 
 
 
