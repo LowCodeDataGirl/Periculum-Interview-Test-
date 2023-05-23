@@ -89,8 +89,13 @@ To run the program, execute run.py. This will generate the required output and d
 - Initialize the Transaction class for each transaction in the bank statement and populate its variables with the relevant transaction details.
 
 
-
 **Thank you for reading through this README**
+
+
+## Check out this Cool Regex Generator
+
+Hey there !. Check out this cool Regex Generator I made using OpenAI API and Retool [here](https://lowcodedatagirl.retool.com/apps/971a2010-f633-11ed-950e-830646754ab4/Regex%20Made%20Easy "Regex Generator with OpenAI API and retool")  
+
 
  **頑張って (Ganbatte)**
 
